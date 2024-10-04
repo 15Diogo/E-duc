@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: yellow;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 3px solid black;
+            z-index: 1000;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            padding-top: 50px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            color: black;
+        }
+
+        .sidebar a {
+            color: black;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .sidebar a .material-icons {
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card .card-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .card .card-title .material-icons {
+            margin-right: 10px;
+        }
+
+        #formulario {
+            display: none;
+            padding-top: 20px;
+        }
+
+        /* Estilos do formulário */
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .form-container .card-header {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- Conteúdo da navbar -->
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <a href="#" onclick="carregarDashboard()"><i class="material-icons">dashboard</i>Dashboard</a>
+            <a href="#" onclick="carregarFormulario()"><i class="material-icons">dashboard</i>Viagens</a>
+            <a href="#"><i class="material-icons">dashboard</i>Usuário</a>
+            <a href="#"><i class="material-icons">dashboard</i>Contas</a>
+            <a href="#"><i class="material-icons">dashboard</i>Cartões</a>
+            <a href="#"><i class="material-icons">settings</i>Configurações</a>
+            <a href="#" onclick="sairSessao()"><i class="material-icons">logout</i> Sair</a>
+
+        </div>
+
+        <div class="content" id="content">
+            <div class="container-fluid">
+                <h1>Bem-vindo, Usuário</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">account_balance_wallet</i>Saldo</h5>
+                                <p class="card-text">R$ 10.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">trending_up</i>Investimentos</h5>
+                                <p class="card-text">R$ 5.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">credit_card</i>Cartões</h5>
+                                <p class="card-text">R$ 2.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">attach_money</i>Empréstimos</h5>
+                                <p class="card-text">R$ 3.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">card_giftcard</i>Primeiro Card</h5>
+                                <p class="card-text">Dentro do card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">savings</i>Poupança</h5>
+                                <p class="card-text">R$ 4.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="formulario" class="content">
+            <div class="container">
+                <div class="form-container">
+                    <h1 class="text-center"><strong>Relatório de Viagem</strong></h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome Completo" value="Diogo Alvarenga Moreira">
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="CPF" value="011.195.011-21">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Telefone" value="62 999051515">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email" value="adm@teste">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="cargo">Cargo/Função</label>
+                            <input type="text" id="cargo" name="cargo" placeholder="Cargo/Função" value="Assessor Administrativo">
+                        </div>
+                        <div class="form-group">
+                            <label for="motivo">Motivo da Viagem</label>
+                            <select id="motivo" name="motivo">
+                                <option value="01">Selecione o Motivo da Viagem</option>
+                                <option value="seminario">Seminário</option>
+                                <option value="curso">Curso</option>
+                                <option value="palestra">Palestra</option>
+                                <option value="formacao">Formação</option>
+                                <option value="congresso">Congresso</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="reuniao">Reunião</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label for="estado" class="form-label">Estado</label>
+                                <select id="estado" name="estado" onchange="atualizarCidades()" class="form-select" required>
+                                    <option value="01">Selecione um estado</option>
+                                    <!-- Opções de estados -->
+                                </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cidade" class="form-label">Cidade</label>
+                                    <select id="cidade" name="cidade" class="form-select" required>
+                                        <option value="01">Selecione uma cidade</option>
+                                        <!-- Opções de cidades -->
+                                    </select>
+                                </div class="form-group">
+                               
+                                <div class="form-group">
+                                    <label for="data_saida" class="form-label">Data Saida</label>
+                                    <input type="date" class="form-control" id="data_saida" name="data_saida">
+                                </div>
+                                <div class="form-group">
+                                    <label for="data_retorno" class="form-label">Data Retorno</label>
+                                    <input type="date" class="form-control" id="data_retorno" name="data_retorno">
+                                </div>
+                                <div>
+                                        <label for="hora_saida" class="form-group">Hora de Saída</label>
+                                        <input type="time" class="form-control" id="hora_saida" name="hora_saida" value="12:36">                                    <div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hora_retorno" class="form-label">Hora de Retorno</label>
+                                    <input type="time" class="form-control" id="hora_retorno" name="hora_retorno" value="12:36">
+                                </div>
+                                
+                                
+                                    <div class="form-group">
+                                        <label for="observacoes" class="form-label">Observações</label>
+                                        <textarea class="form-control" id="observacoes" name="observacoes" rows="5"value="O que é Lorem Ipsum?
+                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo 
+                                        utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
+                                         para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao 
+                                         salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
+                                          quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando
+                                           passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."></textarea>
+                                    </div>
+                                </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="gerarPDF()">Gerar PDF</button>
+                        <button type="reset" class="btn btn-danger" >Limpar</button>
+                        <button type="button" class="btn btn-secondary" onclick="carregarDashboard()">Voltar ao Dashboard</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+
+
+    <script src="estadosCidades.js"></script>
+    <script src="validacoesLab.js"></script>
+    <script>
+        function carregarDashboard() {
+            document.getElementById('formulario').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        function carregarFormulario() {
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('content').style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
