@@ -1,0 +1,125 @@
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: yellow;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 3px solid black;
+            z-index: 1000;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            padding-top: 50px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            color: black;
+        }
+
+        .sidebar a {
+            color: black;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .sidebar a .material-icons {
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card .card-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .card .card-title .material-icons {
+            margin-right: 10px;
+        }
+
+        #formulario {
+            display: none;
+            padding-top: 20px;
+        }
+
+        /* Estilos do formulário */
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .form-container .card-header {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+        }
+   
