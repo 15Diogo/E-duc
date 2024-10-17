@@ -9,14 +9,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css"> <!-- Vinculando o CSS -->
 
+    
 </head>
 
 <body>
-    <nav class="navbar">
-
-        <h2 class="h1">E-DOC</h2>
-        
-        <!-- Conteúdo da navbar -->
+    <nav class="navbar h2">
+        <h2>e-doc</h2>
     </nav>
 
     <div class="main-container">
@@ -25,7 +23,6 @@
             <a href="#" onclick="carregarFormulario()"><i class="material-icons">dashboard</i>Viagens</a>
             <a href="#"><i class="material-icons">dashboard</i>Usuário</a>
             <a href="#"><i class="material-icons">dashboard</i>Contas</a>
-            <a href="#"><i class="material-icons">dashboard</i>Cartões</a>
             <a href="#"><i class="material-icons">settings</i>Configurações</a>
             <a href="#" onclick="sairSessao()"><i class="material-icons">logout</i> Sair</a>
 
@@ -33,29 +30,29 @@
 
         <div class="content" id="content">
             <div class="container-fluid">
-                <h6>Bem-vindo, Usuário</h6>
+                <h1>Bem-vindo, Usuário</h1>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">account_balance_wallet</i>Saldo</h5>
-                                <p class="card-text">R$ 10.000,00</p>
+                                <h5 class="card-title"><i class="material-icons">account_balance_wallet</i>Teste</h5>
+                                <p class="card-text">FDFDFDDFDD</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">trending_up</i>Investimentos</h5>
-                                <p class="card-text">R$ 5.000,00</p>
+                                <h5 class="card-title"><i class="material-icons">trending_up</i>teste</h5>
+                                <p class="card-text">TKDKFJD</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">credit_card</i>Cartões</h5>
-                                <p class="card-text">R$ 2.000,00</p>
+                                <h5 class="card-title"><i class="material-icons">credit_card</i>teste</h5>
+                                <p class="card-text">teste</p>
                             </div>
                         </div>
                     </div>
@@ -64,31 +61,30 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">attach_money</i>Empréstimos</h5>
-                                <p class="card-text">R$ 3.000,00</p>
+                                <h5 class="card-title"><i class="material-icons">attach_money</i>texto</h5>
+                                <p class="card-text">textoj</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">card_giftcard</i>Primeiro Card</h5>
-                                <p class="card-text">Dentro do card</p>
+                                <h5 class="card-title"><i class="material-icons">card_giftcard</i>texto</h5>
+                                <p class="card-text">texto</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="material-icons">savings</i>Poupança</h5>
-                                <p class="card-text">R$ 4.000,00</p>
+                                <h5 class="card-title"><i class="material-icons">savings</i>texto</h5>
+                                <p class="card-text">testo</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div id="formulario" class="content">
             <div class="container">
                 <div class="form-container">
@@ -147,11 +143,11 @@
                                
                                 <div class="form-group">
                                     <label for="data_saida" class="form-label">Data Saida</label>
-                                    <input type="date" class="form-control" id="data_saida" name="data_saida">
+                                    <input type="date" class="form-control" id="data_saida" name="data_saida" value="2024-10-10">
                                 </div>
                                 <div class="form-group">
                                     <label for="data_retorno" class="form-label">Data Retorno</label>
-                                    <input type="date" class="form-control" id="data_retorno" name="data_retorno">
+                                    <input type="date" class="form-control" id="data_retorno" name="data_retorno" value="2024-10-10">
                                 </div>
                                 <div>
                                         <label for="hora_saida" class="form-group">Hora de Saída</label>
@@ -165,13 +161,7 @@
                                 
                                     <div class="form-group">
                                         <label for="observacoes" class="form-label">Observações</label>
-                                        <textarea class="form-control" id="observacoes" name="observacoes" rows="5"value="O que é Lorem Ipsum?
-                                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo 
-                                        utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                                         para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao 
-                                         salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60,
-                                          quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando
-                                           passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."></textarea>
+                                        <textarea class="form-control" id="observacoes" name="observacoes" rows="5"value="O que é" ></textarea>
                                     </div>
                                 </div>
                         </div>
@@ -191,7 +181,7 @@
 
 
     <script src="estadosCidades.js"></script>
-    <script src="validacoes.js"></script>
+    <script src="validacoesLib.js"></script>
     <script>
         function carregarDashboard() {
             document.getElementById('formulario').style.display = 'none';
