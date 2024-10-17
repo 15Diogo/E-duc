@@ -46,7 +46,9 @@ body {
 
 
 .sidebar a:hover {
-    background-color:aquamarine;
+    background-color:black;
+    color: white;
+
     
 }
 
