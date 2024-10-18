@@ -1,0 +1,145 @@
+
+        /* Estilo geral da página (estilo Netflix) */
+        body {
+            width: 100%;
+             padding: 20px;
+             margin: 0;
+             box-sizing: border-box;
+             font-size: 13px;
+             font-family: 'Digital-7', sans-serif;
+
+             background-color: black;
+             color: black;
+
+             
+  
+        }
+
+        /* Estilo para os campos de input, select e textarea */
+        input, select, textarea {
+            width: 100%;
+             padding: 10px;
+             margin: 8px 0;
+             box-sizing: border-box;
+            font-size: 14px;
+            color: black;
+            border-radius: 8px;
+            background-color:#808080;
+
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: white;
+            color: black;
+
+            
+
+             /* Placeholder com transparência */
+        }
+
+        /* Estilo para os labels */
+        label {
+            color: rgba(255, 255, 255, 0.849); /* Placeholder com transparência */
+        }
+
+        /* Estilo para os botões */
+        button {
+            padding: 10px 20px;
+            background-color: #e50914; /* Vermelho Netflix */
+            color: antiquewhite;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f40612; /* Hover mais claro no botão */
+        }
+
+        /* Estilo para containers flexíveis */
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            margin: 8px 0;
+            flex-wrap: wrap; /* Permite quebra de linha */
+        }
+
+        .flex-container.column {
+            flex-direction: column;
+        }
+
+        .flex-container.row {
+            flex-direction: row;
+        }
+
+        /* Estilo específico para o container da logo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para textarea */
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Estilo para o container de botões */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilo para o título */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para alinhar datas e horários na mesma linha */
+        .date-time-group {
+            display: flex;
+            gap: 20px;
+            margin: 8px 0;
+            flex-wrap: wrap; /* Permite quebra de linha */
+        }
+
+        .date-time-group > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Estilo para os campos Nome e CPF, e Agência e Conta em linha */
+        .inline-group {
+            display: flex;
+            gap: 20px;
+            margin: 8px 0;
+            flex-wrap: wrap; /* Permite quebra de linha */
+        }
+
+        .inline-group > div {
+            flex: 1;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .flex-container, .date-time-group, .inline-group {
+                flex-direction: column;
+            }
+
+            .inline-group > div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .date-time-group > div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }

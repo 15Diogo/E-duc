@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF com Papel Timbrado</title>
+    <script src="https://unpkg.com/pdf-lib"></script>
+</head>
+<body>
+
+    <form id="dadosForm">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf"><br><br>
+        <!-- Outros campos aqui -->
+        <button type="button" onclick="gerarPDFComPapelTimbrado()">Gerar PDF</button>
+    </form>
+
+    <script>
+        async function gerarPDFComPapelTimbrado() {
+            // Carregar o PDF do papel timbrado
+            const url = 'url_do_seu_papel_timbrado.pdf'; // Coloque o caminho correto aqui
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
+            // Carregar o documento PDF existente
+            const pdfDoc = await PDFDocument.load(existingPdfBytes);
+
+            // Pegar a primeira página do PDF timbrado
+            const page = pdfDoc.getPage(0);
+
+            // Capturar os valores do formulário
+            const nome = document.getElementById('nome').value.toUpperCase();
+            const cpf = document.getElementById('cpf').value.toUpperCase();
+            // Adicionar mais campos conforme necessário
+
+            // Adicionar o texto à página
+            page.drawText(`NOME COMPLETO: ${nome}`, {
+                x: 50, // Ajuste as coordenadas conforme necessário
+                y: 700,
+                size: 12,
+                color: rgb(0, 0, 0),
+            });
+
+            page.drawText(`CPF: ${cpf}`, {
+                x: 50,
+                y: 680,
+                size: 12,
+                color: rgb(0, 0, 0),
+            });
+
+            // Continue adicionando o restante dos campos
+            // page.drawText(`Outro Campo: ${campo}`, { x: 50, y: 660, size: 12, color: rgb(0, 0, 0) });
+
+            // Finalizar o documento PDF
+            const pdfBytes = await pdfDoc.save();
+
+            // Download do PDF com o papel timbrado e texto sobreposto
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'relatorio_com_papel_timbrado.pdf';
+            link.click();
+        }
+    </script>
+</body>
+</html>

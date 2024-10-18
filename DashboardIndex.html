@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--icones-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Index</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color:darkgray;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color:darkslateblue;
+            padding: 15px;
+            position: fixed;
+            width: 250px;
+            border-radius: 20;
+        }
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+
+        }
+        .navbar {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            background-color: darkslateblue ;
+            height: 100px;
+         
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+                border-radius: 5px;
+            }
+            .navbar {
+                margin-left: 0;
+                width: 100%;
+            }
+        .pesquisa{
+            background-color: blanchedalmond;
+            height: 200;
+            width: 300;
+        }
+        .card{
+            border-radius: 10px;
+        }
+            
+        }
+        
+    </style>
+</head>
+<Nav class="navbar">
+    
+</Nav>
+<body>
+    <div class="sidebar">
+        
+        <a href="#">Perfil</a>
+        <a href="#">Usuários</a>
+        <a href="#">Configurações</a>
+        <a href="#">Sair</a>
+
+    </div>
+    <div class="content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        </nav>
+        <div class="container-fluid">
+            <h1>Nome do usuário</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body" type="button">
+                            <h5 class="card-title"  >Gerador de Relatórios De diária</h5>
+                            <p class="card-text" type="button">Conteúdo do card 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body card">
+                            <h5 class="card-title">Card 2</h5>
+                            <p class="card-text">Pra colocar coisas que nao sei ainda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 3</h5>
+                            <p class="card-text">Pra colocar coisas que nao sei ainda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
