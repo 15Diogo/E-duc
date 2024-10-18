@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css"> <!-- Vinculando o CSS -->
+</head>
+
+<body>
+    <nav class="navbar h2">
+        <h2>e-duc</h2>
+    </nav>
+
+    <div class="main-container d-flex">
+        <div class="sidebar">
+            <a href="#" onclick="carregarDashboard()"><i class="material-icons">dashboard</i>Dashboard</a>
+            <a href="#" onclick="carregarFormulario()"><i class="material-icons">airplanemode_active</i>Viagens</a>
+            <a href="#"><i class="material-icons">account_circle</i>Usuário</a>
+            <a href="#"><i class="material-icons">checklist</i>Tafefas</a>
+            <a href="#"><i class="material-icons">settings</i>Configurações</a>
+            <a href="#" onclick="sairSessao()"><i class="material-icons">logout</i> Sair</a>
+        </div>
+
+        <div class="content" id="content">
+            <div class="container-fluid">
+                <h1>Bem-vindo, Usuário</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">airplanemode_active</i>Viagem</h5>
+                                <p class="card-text">FDFDFDDFDD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">trending_up</i>Teste</h5>
+                                <p class="card-text">TKDKFJD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">credit_card</i>Teste</h5>
+                                <p class="card-text">Teste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Segunda linha de cards -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">attach_money</i>Texto</h5>
+                                <p class="card-text">Textoj</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">card_giftcard</i>Texto</h5>
+                                <p class="card-text">Texto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="material-icons">savings</i>Texto</h5>
+                                <p class="card-text">Testo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="formulario" class="content">
+            <div class="container">
+                <div class="form-container">
+                    <h1 class="text-center"><strong>Relatório de Viagem</strong></h1>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo" value="Diogo Alvarenga Moreira">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" value="011.195.011-21">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Telefone" value="62 999051515">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="cargo">Cargo/Função</label>
+                                <input type="text" id="cargo" name="cargo" class="form-control" placeholder="Cargo/Função" value="Assessor Administrativo">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="lotacao">Lotação</label>
+                                <select id="lotacao" name="lotacao" class="form-control select">
+                                    <option value="01">Selecione onde sua Lotação</option>
+                                    <option>Secretaria de Educação</option>
+                                    <option>Secretaria de Saúde</option>
+                                    <option>Secretaria de Executivo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="matricula">Matrícula</label>
+                                <input type="number" id="matricula" name="matricula" class="form-control" placeholder="Matrícula" value="12545588">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="agencia">Agência do Banco</label>
+                                <input type="number" id="agencia" name="agencia" class="form-control" placeholder="Agência do Banco" value="0820">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="conta">Conta do Banco</label>
+                                <input type="number" id="conta" name="conta" class="form-control" placeholder="Conta do Banco" value="4545545">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="email" value="adm@teste">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="motivo">Motivo da Viagem</label>
+                                <select id="motivo" name="motivo" class="form-control select">
+                                    <option value="01">Selecione o Motivo da Viagem</option>
+                                    <option value="seminario">Seminário</option>
+                                    <option value="curso">Curso</option>
+                                    <option value="palestra">Palestra</option>
+                                    <option value="formacao">Formação</option>
+                                    <option value="congresso">Congresso</option>
+                                    <option value="workshop">Workshop</option>
+                                    <option value="reuniao">Reunião</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado" class="form-control select" onchange="atualizarCidades()">
+                                    <option value="01">Selecione um estado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="cidade">Cidade</label>
+                                <select id="cidade" name="cidade" class="form-control select">
+                                    <option value="01">Selecione uma cidade</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="data_saida">Data de Saída</label>
+                                <input type="date" id="data_saida" name="data_saida" class="form-control" value="2024-10-10">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="data_retorno">Data de Retorno</label>
+                                <input type="date" id="data_retorno" name="data_retorno" class="form-control" value="2024-10-10">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="hora_saida">Hora de Saída</label>
+                                <input type="time" id="hora_saida" name="hora_saida" class="form-control" value="12:36">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="hora_retorno">Hora de Retorno</label>
+                                <input type="time" id="hora_retorno" name="hora_retorno" class="form-control" value="12:36">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label for="observacoes">Observações</label>
+                                <textarea class="form-control" id="observacoes" name="observacoes" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="gerarPDF()">Gerar PDF</button>
+                        <button type="reset" class="btn btn-danger">Limpar</button>
+                        <button type="button" class="btn btn-secondary" onclick="carregarDashboard()">Voltar ao Dashboard</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="estadosCidades.js"></script>
+    <script src="validacoesLib.js"></script>
+    <script>
+        function carregarDashboard() {
+            document.getElementById('formulario').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        function carregarFormulario() {
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('content').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
