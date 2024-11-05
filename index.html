@@ -91,19 +91,19 @@
                     <form>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="nome">Nome Completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo" value="Diogo Alvarenga Moreira">
+                                <label for="nome">Nome Completo*</label>
+                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo" value="Diogo Alvarenga Moreira" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" value="011.195.011-21">
+                                <label for="cpf">CPF*</label>
+                                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" value="011.195.011-21"required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Telefone" value="62 999051515">
+                                <label for="telefone">Telefone*</label>
+                                <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Telefone" value="62 999051515" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="cargo">Cargo/Função</label>
@@ -113,7 +113,7 @@
 
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="lotacao">Lotação</label>
+                                <label for="lotacao">Lotação *</label>
                                 <select id="lotacao" name="lotacao" class="form-control select">
                                     <option value="01">Selecione onde sua Lotação</option>
                                     <option>Secretaria de Educação</option>
@@ -122,8 +122,8 @@
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="matricula">Matrícula</label>
-                                <input type="number" id="matricula" name="matricula" class="form-control" placeholder="Matrícula" value="12545588">
+                                <label for="matricula">Matrícula *</label>
+                                <input type="number" id="matricula" name="matricula" class="form-control" placeholder="Matrícula" value="12545588" required>
                             </div>
                         </div>
 
@@ -155,6 +155,7 @@
                                     <option value="congresso">Congresso</option>
                                     <option value="workshop">Workshop</option>
                                     <option value="reuniao">Reunião</option>
+                                    <option value="outro">Outro</option>
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
@@ -195,8 +196,8 @@
                                 <input type="time" id="hora_retorno" name="hora_retorno" class="form-control" value="12:36">
                             </div>
                             <div class="col-md-12 form-group">
-                                <label for="observacoes">Observações</label>
-                                <textarea class="form-control" id="observacoes" name="observacoes" rows="5"></textarea>
+                                <label for="relatorio">Relatório</label>
+                                <textarea class="form-control" id="relatorio" name="relatorio" rows="10"></textarea>
                             </div>
                         </div>
 
