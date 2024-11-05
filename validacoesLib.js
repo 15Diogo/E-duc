@@ -18,7 +18,7 @@ function gerarPDF() {
     const data_retorno = formatarData(document.getElementById('data_retorno').value)
     const hora_saida = document.getElementById('hora_saida').value;
     const hora_retorno = document.getElementById('hora_retorno').value;
-    const observacoes = document.getElementById('observacoes').value;
+    const relatorio = document.getElementById('relatorio').value;
     
     // Obter a data atual para a criação do documento
     const hoje = new Date();
@@ -51,47 +51,41 @@ function gerarPDF() {
                 text: 'RELATORIO DE VIAGEM',
                 style: 'header',
                 fillColor: '#f0f0f0', // Cor de fundo
-                margin: [0, 10, 0, 10]
+                margin: [0, 10, 0, 15]
             },
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 2, 0, 2] },
-            { text: 'DADOS ',alignment:'center', bold:true, margin: [0, 0, 0, 0] },
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 2, 0, 2] },
-            { text: `NOME: ${nome}  |  CPF: ${cpf}  |  TELEFONE: ${telefone} |  ` , style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 10] },
 
             
-            {text: `EMAIL: ${email}  | CARGO/FUNÇÃO: ${cargo} |  LOTAÇÃO: ${lotacao}| MATRICULA: ${matricula} `, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 2] },
-
-            {text: `AGÊNCIA: ${agencia}  | CONTA: ${conta} |`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 2] },
-
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 2, 0, 2] },
-
-            { text: 'DADOS DA VIAGEM',alignment:'center',bold:true, margin: [0, 2, 0, 2] },
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 5, 0, 5] },
             
+            { text: '-------------------------------------------------- DADOS DO SERVIDOR ------------------------------------------------',alignment:'center', bold:true, margin: [0, 0, 0, 15] },
 
-            { text: `MOTIVO: ${motivo}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] },
-            { text: `ESTADO: ${estado}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] },
-            { text: `CIDADE: ${cidade}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 2, 0, 2] }, 
-            { text: `DATA SAÍDA: ${data_saida}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 2, 0, 2] }, 
-            { text: `DATA RETORNO: ${data_retorno}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] }, 
-            { text: `HORA DA SAÍDA: ${hora_saida}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] },
-            { text: `HORA DO RETORNO : ${hora_retorno}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] },
-            { text: `OBSERVAÇÕES: ${observacoes}`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 5] },
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 2, 0, 2] },
+            { text: `NOME:  ${nome}                    ||            CPF:  ${cpf}            ||        TELEFONE: ${telefone}      || ` , style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 15] },
+            {text: `MATRICULA:  ${matricula}         ||       CARGO/FUNÇÃO:  ${cargo}      ||     LOTAÇÃO:  ${lotacao}   ||`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 15] },
+            {text: `AGÊNCIA:  ${agencia} / CONTA:  ${conta}    ||    EMAIL:  ${email}  ||`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 0, 0, 15] },
 
-            { text: 'AREA DE AUTENTICAÇÃO',alignment:'center',bold:true, margin: [0, 2, 0, 2] },
-            { text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------', margin: [0, 5, 0, 5] },
+            { text: '------------------------------------------------- DADOS DA VIAGEM --------------------------------------------------',alignment:'center', bold:true, margin: [0, 0, 0, 15],fillColor: '#0000FF' },
+
+            { text: `MOTIVO:  ${motivo}                 ||             ESTADO:  ${estado}          ||           CIDADE:  ${cidade}  ||   `, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 5, 0, 15] },
+            { text: `DATA SAIDA: ${data_saida}      ||     DATA RETORNO:   ${data_retorno}    ||    HORA DA SAÍDA:   ${hora_saida}     ||     HORA DO RETORNO : ${hora_retorno}   ||`, style: 'subheader', fillColor: '#f9f9f9', margin: [0, 2, 0, 15] }, 
+            { text: '--------------------------------------------------------- RELATÓRIO -----------------------------------------------------',alignment:'center', bold:true, margin: [0, 0, 0, 15] },
+            
+            { text: ` : ${relatorio}`, style: 'subheader', margin: [0, 5, 0, 10],fillColor: '#0000FF' },
+
+
+            { text: '---------------------------------------------- ÁREA DE AUTENTICAÇÃO -------------------------------------------',alignment:'center', bold:true, margin: [0, 0, 0, 40] },
+            
          
 
-            { text: 'ASSINATURA DO SERVIDOR(A):',alignment: 'center', margin: [40, 0, 40, 0] },
-            { text: '_______________________________________________',alignment: 'center', margin: [20, 0, 20, 0] },
+            { text: 'ASSINATURA DO SERVIDOR(A):',alignment: 'center', margin: [40, 0, 0, 10] },
+            { text:'_________________________________________________________',alignment: 'center',style:'subheader', margin: [20, 0, 20, 20] },
+
             { text: 'ASSINATURA DO RESPONSÁVEL PELO DEPARTAMENTO(A):',alignment: 'center', margin: [0, 10, 0, 0] },
-            { text: '______________________________________________',alignment: 'center', margin: [0, 2, 0, 2] },
+            { text: '_________________________________________________________',alignment: 'center',style:'subheader', margin: [0, 2, 0, 40] },
 
-            
-            {text: 'DEFERIDO ( ) INDEFERIDO( )'},
+            { text: 'Campo a ser preenchido excluvivamente pelo prefeito',alignment:'center', fontSize: 9, bold:true, margin: [0, 0, 0, 15] },
 
-            {text:'ASSINATURA DO PREFEITO',alignment:'center'},
+            {text: 'DEFERIDO ( ) INDEFERIDO( )  Data: ___/___/2024  Assinatura :________________________________________________' ,alignment: 'left',margin: [0, 0, 0, 5] },
+
+            {text:'ASSINATURA DO PREFEITO',alignment:'center',margin: [0, 0, 0, 5]},
             { text: '______________________________________________',alignment: 'center', margin: [0, 0, 0, 0] },
 
             { text: dataTexto, alignment: 'right', margin: [0, 0, 0, 0] },
@@ -100,20 +94,23 @@ function gerarPDF() {
         ],
         styles: {
             header: {
+            
                 fontSize: 14,
                 bold: true,
                 alignment: 'center',
                 margin: [0, 20, 0, 20],
+                
             
             },
-            subheader: { bold:true,
-                fontSize: 10,
-                margin: [0, 5, 0, 5]
-                
+            subheader: {
+                 bold:true,
+                fontSize: 8,
+                margin: [0, 5, 0, 5],
+               
             }
         },
         pageSize: 'A4',
-        font: 'Times-Roman',  // Define a fonte padrão para o documento
+        font: 'Arial',  // Define a fonte padrão para o documento
 
         pageOrientation: 'portrait'
     };
